@@ -97,13 +97,14 @@ Server.prototype.Start = function()
       var body = "var Properties = {
         DEVICE_WIDTH: 1024,
         DEVICE_HEIGHT: 600,
-        RENDERER : \"DOM\",
+        RENDERER : 'DOM',
 
         SPLASH_DURATION: 2000,
         WINSCREEN_DURATION: 5000,
 
-        MASTERSERVER_IP: \"http://bombz.herokuapp.com\",
-        MASTERSERVER_PORT: " + Config.Server.PORT + ",};";
+        MASTERSERVER_IP: 'http://bombz.herokuapp.com',
+        MASTERSERVER_PORT: " + Config.Server.PORT + "};";
+
       response.setHeader('Content-Type', 'text/javascript');
       response.end(body);
     });
