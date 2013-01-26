@@ -20,7 +20,7 @@ SceneDefinitions.WaitingRoomScene = new Scene("WaitingRoomScene", function()
 	if ( NetworkManager.connected )
 		handler_Connect();
 	else
-		NetworkManager.Connect(Properties.MASTERSERVER_IP, Properties.MASTERSERVER_PORT, handler_Connect);
+		NetworkManager.Connect(ServerProperties.IP, ServerProperties.PORT, handler_Connect);
 
 	console.log("waiting room scene running");
 
