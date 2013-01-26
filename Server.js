@@ -91,6 +91,12 @@ Server.prototype.Start = function()
       http.use( express.static( __dirname + '/client/package', { maxAge: 31557600000 } ) );
       http.use( http.router );
     });
+
+    http.get('/', function ( request, response )
+    {
+      response.send( Config.Server.PORT );
+    });
+
     http.all( '*', function( request, response )
     {
       response.send( 404 );
