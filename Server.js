@@ -94,7 +94,7 @@ Server.prototype.Start = function()
 
     http.get('/ServerProperties.js', function ( request, response )
     {
-      var body = "var ServerProperties = { IP: 'http://bombz.herokuapp.com', PORT: " + 80 + "};";
+      var body = "var ServerProperties = { IP: 'http://bbdragon.herokuapp.com', PORT: " + 80 + "};";
 
       response.setHeader('Content-Type', 'text/javascript');
       response.end(body);
